@@ -1,4 +1,4 @@
-![Operation ShellShock](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Operation_Shellshock_art.png)
+![Operation ShellShock](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Operation_Shellshock_art.PNG)
 
 
 We were successfully able to run the ShellShock exploit on a vulnerable machine using our automated code [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py).  Let's take a look behind the scenes as to how Operation ShellShock works.   
@@ -37,7 +37,7 @@ NMAP is used in this case to scan the network for machines with an open port 80
 
 </details>
 
-![NMAP SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/ARP_scan.png)
+![NMAP SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/ARP_scan.PNG)
 
   -  When NMAP is ran using the command shown below, it scans the network we input and searches specifically for IP Address with an open port 80
 
@@ -50,7 +50,7 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 
 </details>
 
-![DIRB SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/DIRB_SCAN.png)
+![DIRB SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/DIRB_SCAN.PNG)
 
 
 
@@ -99,12 +99,12 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 - [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py)
 - [shellshock_script.py](https://github.com/DJ2989/ShellshockProject/blob/main/shellshock_script.py)
 
-![File Download](https://github.com/DJ2989/ShellshockProject/blob/main/Images/nmap_file_download.png)
+![File Download](https://github.com/DJ2989/ShellshockProject/blob/main/Images/nmap_file_download.PNG)
  
 2. Once you are on the same computer network as target, run nmap_scanner.py by using the following command in a terminal.
 - *python nmap_scanner.py*
 
-![Running Operation ](https://github.com/DJ2989/ShellshockProject/blob/main/Images/python_command.png)
+![Running Operation ](https://github.com/DJ2989/ShellshockProject/blob/main/Images/python_command.PNG)
 
 3. Program will start, press "Enter" key to continue. Type in IP Network address with CIDR notation and push "Enter" key.
 
@@ -116,8 +116,8 @@ If machine found, it will continue and initiate a DIRB scan for any files in Cgi
 
 5. At this point program will request what port number you would like to open a listener on your machine for a reverse shell. Enter port number and push "Enter"
 
-![Enter Port](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Port_prompt.png)
+![Enter Port](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Port_prompt.PNG)
 
 6. Congratulations! Program has ran succesfully and you should have a reverse shell opened and able to run commands on target machine. 
 
-![Reverse_Shell](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Reverse_Shell.png)
+![Reverse_Shell](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Reverse_Shell.PNG)
