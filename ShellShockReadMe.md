@@ -108,7 +108,7 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 
 3. Program will start, press "Enter" key to continue. Type in IP Network address with CIDR notation and push "Enter" key.
 
-![Scan](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Network_address_scan.png)
+![Scan](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Network_address_scan.PNG)
 
 4. At this point script will run and check for machines on network with open TCP 80 ports. If no device detected, script will end.
 If machine found, it will continue and initiate a DIRB scan for any files in Cgi-bin folder that exist on machine.
