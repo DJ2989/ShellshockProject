@@ -1,3 +1,4 @@
+![Operation ShellShock](./images/Operation_Shellshock_art.png)
 
 
 We were successfully able to run the ShellShock exploit on a vulnerable machine using our automated code [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py).  Let's take a look behind the scenes as to how Operation ShellShock works.   
@@ -68,52 +69,55 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 </details>
   
 
-> Now at this we have all the needed information to implement the ShellShock exploit
-> 1.  
-> 2.
-> 3.
+> **Now at this we have all the needed information to implement the ShellShock exploit**
 >
-![Packet Sniffing](./images/login_sniffed.png)
+>1.  You will be asked to enter a port number, after the script will open up a terminal with a NetCat listener.
+> 
+>2. The script will then send a get request with Bash commands embedded in the request to initiate the exploit
+> 
+>3. At this point you will have a reverse shell terminal opened on the target machine
+>
 
-    This packet sniffer will only capture data that is sent in HTTP, but we can grab this data without the target ever even knowing.
 
-4. Setting up the listener...etc 
-
-Insert screenshot here 
-
-    Explain screenshot here
-
-<details> 
-
-  <summary>Why is it much easier for us to steal HTTP data as opposed to HTTPS?
-
-  </summary>
-
-If you're thinking SSL certificates you are indeed correct! HTTP and HTTPS are the same protocol, however HTTPS has an additonal layer of security. Even if we were to capture HTTPS data we still could read it. (we'll not yet at least. Stay posted for a script to help us sidestep the HTTPS protocol)
-
-</details>
 
 ***
 
-## File Intercepting with Python
+## How to run Operation Shellshock Program?
 
-What are the steps to file intercepting?
+***
 
-    1. Our target makes an HTTP request to download a file
+#### *This current script is only able to run on Linux(Ubuntu)*
+---
+#### Software Requirements
 
-    
+  
+   - Your system will need to have **Python, Netcat, DIRB** and **Nmap** installed prior to moving forward.
+---
+#### Using Operation Shellshock
 
-    2. We modify/replace the request without our target knowing
+1.  You will need to first need to **download** both *nmap_scanner.py* and *shellshock_script.py*, have them both in the same folder.  
+- [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py)
+- [shellshock_script.py](https://github.com/DJ2989/ShellshockProject/blob/main/shellshock_script.py)
 
-<details> 
+![File Download](./images/nmap_file_download.png)
+ 
+2. Once you are on the same computer network as target, run nmap_scanner.py by using the following command in a terminal.
+- *python nmap_scanner.py*
 
-  <summary>For what purpose would we want to replace our target's download file, with a file of our own?
+![Running Operation ](./images/python_command.png)
 
-  </summary>
+3. Program will start, press "Enter" key to continue. Type in IP Network address with CIDR notation and push "Enter" key.
 
-For malware injection and execution.
+![Scan](./images/Network_address_scan.png)
 
-</details>
+4. At this point script will run and check for machines on network with open TCP 80 ports. If no device detected, script will end.
+If machine found, it will continue and initiate a DIRB scan for any files in Cgi-bin folder that exist on machine.
+*Exploit will END if no files in that folder are found. Exploit will **NOT WORK** if no files in that folder are found, as it will not be able to execute Shellshock exploit* 
 
-1. Now that we have successfully put ourselves in between the gateway router and our target IP, and we are monitoring our targets HTTP request we want to look for a download request/reponse
+5. At this point program will request what port number you would like to open a listener on your machine for a reverse shell. Enter port number and push "Enter"
 
+![Enter Port](./images/Port_prompt.png)
+
+6. Congratulations! Program has ran succesfully and you should have a reverse shell opened and able to run commands on target machine. 
+
+![Reverse_Shell](./images/Reverse_Shell.png)
