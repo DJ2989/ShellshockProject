@@ -1,4 +1,4 @@
-![Operation ShellShock](./images/Operation_Shellshock_art.png)
+![Operation ShellShock](./Images/Operation_Shellshock_art.png)
 
 
 We were successfully able to run the ShellShock exploit on a vulnerable machine using our automated code [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py).  Let's take a look behind the scenes as to how Operation ShellShock works.   
@@ -37,7 +37,7 @@ NMAP is used in this case to scan the network for machines with an open port 80
 
 </details>
 
-![NMAP SCAN](./images/ARP_scan.png)
+![NMAP SCAN](./Images/ARP_scan.png)
 
   -  When NMAP is ran using the command shown below, it scans the network we input and searches specifically for IP Address with an open port 80
 
@@ -50,7 +50,7 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 
 </details>
 
-![DIRB SCAN](./images/DIRB_SCAN.png)
+![DIRB SCAN](./Images/DIRB_SCAN.png)
 
 
 
@@ -99,16 +99,16 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 - [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py)
 - [shellshock_script.py](https://github.com/DJ2989/ShellshockProject/blob/main/shellshock_script.py)
 
-![File Download](./images/nmap_file_download.png)
+![File Download](./Images/nmap_file_download.png)
  
 2. Once you are on the same computer network as target, run nmap_scanner.py by using the following command in a terminal.
 - *python nmap_scanner.py*
 
-![Running Operation ](./images/python_command.png)
+![Running Operation ](./Images/python_command.png)
 
 3. Program will start, press "Enter" key to continue. Type in IP Network address with CIDR notation and push "Enter" key.
 
-![Scan](./images/Network_address_scan.png)
+![Scan](./Images/Network_address_scan.png)
 
 4. At this point script will run and check for machines on network with open TCP 80 ports. If no device detected, script will end.
 If machine found, it will continue and initiate a DIRB scan for any files in Cgi-bin folder that exist on machine.
@@ -116,8 +116,8 @@ If machine found, it will continue and initiate a DIRB scan for any files in Cgi
 
 5. At this point program will request what port number you would like to open a listener on your machine for a reverse shell. Enter port number and push "Enter"
 
-![Enter Port](./images/Port_prompt.png)
+![Enter Port](./Images/Port_prompt.png)
 
 6. Congratulations! Program has ran succesfully and you should have a reverse shell opened and able to run commands on target machine. 
 
-![Reverse_Shell](./images/Reverse_Shell.png)
+![Reverse_Shell](./Images/Reverse_Shell.png)
