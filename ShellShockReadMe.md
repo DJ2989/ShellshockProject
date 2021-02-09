@@ -1,7 +1,7 @@
 ![Operation ShellShock](https://github.com/DJ2989/ShellshockProject/blob/main/Images/Operation_Shellshock_art.PNG)
 
 
-We were successfully able to run the ShellShock exploit on a vulnerable machine using our automated code [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py).  Let's take a look behind the scenes as to how Operation ShellShock works.   
+We were successfully able to run the ShellShock exploit on a vulnerable machine using our automated code [operation_shellshock.py](https://github.com/DJ2989/ShellshockProject/blob/main/operation_shellshock.py).  Let's take a look behind the scenes as to how Operation ShellShock works.   
 
 ***
 
@@ -95,8 +95,8 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 ---
 #### Using Operation Shellshock
 
-1.  You will need to first need to **download** both *nmap_scanner.py* and *shellshock_script.py*, have them both in the same folder.  
-- [nmap_scanner.py](https://github.com/DJ2989/ShellshockProject/blob/main/nmap_scanner.py)
+1.  You will need to first need to **download** both *operation_shellshock.py* and *shellshock_script.py*, have them both in the same folder.  
+- [operation_shellshock.py](https://github.com/DJ2989/ShellshockProject/blob/main/operation_shellshock.py)
 - [shellshock_script.py](https://github.com/DJ2989/ShellshockProject/blob/main/shellshock_script.py)
 
 ![File Download](https://github.com/DJ2989/ShellshockProject/blob/main/Images/nmap_file_download.PNG)
