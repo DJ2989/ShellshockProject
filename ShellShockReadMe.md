@@ -101,8 +101,8 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 
 ![File Download](https://github.com/DJ2989/ShellshockProject/blob/main/Images/nmap_file_download.PNG)
  
-2. Once you are on the same computer network as target, run nmap_scanner.py by using the following command in a terminal.
-- *python nmap_scanner.py*
+2. Once you are on the same computer network as target, run operation_shellshock.py by using the following command in a terminal.
+- *python operation_shellshock.py*
 
 ![Running Operation ](https://github.com/DJ2989/ShellshockProject/blob/main/Images/python_command.PNG)
 
