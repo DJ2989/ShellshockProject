@@ -37,7 +37,7 @@ NMAP is used in this case to scan the network for machines with an open port 80
 
 </details>
 
-![NMAP SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/ARP_scan.PNG)
+![NMAP SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/NMAP NOT Parsed.JPG)
 
   -  When NMAP is ran using the command shown below, it scans the network we input and searches specifically for IP Address with an open port 80
 
@@ -50,7 +50,7 @@ DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects
 
 </details>
 
-![DIRB SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/DIRB_SCAN.PNG)
+![DIRB SCAN](https://github.com/DJ2989/ShellshockProject/blob/main/Images/DIRB NOT Parse.JPG)
 
 
 
